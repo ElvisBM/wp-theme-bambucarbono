@@ -1,0 +1,16 @@
+#banner{
+	.item{
+		width:100%;
+		background-repeat: no-repeat!important;
+		background-size:cover!important;
+	}
+
+	h3{
+		color: #fff;
+	    font-weight: 100;
+	    text-align: center;
+	    padding: 25% 0px;
+	    font-size: 4em;
+	}
+	.carousel-control-prev, .carousel-control-next{}
+}

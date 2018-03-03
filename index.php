@@ -19,7 +19,7 @@ get_header(); ?>
 	  				$url_image = wp_get_attachment_url( $gallery[$i]['images'] ); 
 	  				$text_image = $gallery[$i]['text'];
 	  				$active = ( $i==0 ? ' active' : '' );
-	  				echo '<div class="carousel-item row '.$active.'">';
+	  				echo '<div class="carousel-item '.$active.'">';
 	  				echo '<div class="item" style="background: url('.$url_image.');">';
 	  				echo '<div class="container">';
 	  				echo '<h3>'.$text_image.'</h3>';
