@@ -1,0 +1,157 @@
+footer{
+	color:#343939;
+	a{
+		color: #fff;
+		text-decoration:none;
+	}
+	#footer{
+		background: #71bc54;
+		padding: 40px 0px;
+		font-weight:400;
+		h3{
+			font-weight:300;
+			font-size: 2.2em;
+    		margin-bottom: 10px;
+		}
+		span{
+			padding:0px;
+			margin:0px;
+		}
+		label{
+			width: 80%;
+		}
+		.label{
+			width: 100px;
+		    display: inline-block;
+		    text-align: right;
+		    vertical-align: top;
+		    padding: 10px 7px 0px 0px;
+		}
+		.wpcf7-form-control-wrap{
+			position: inherit;
+    		display: inline-block;
+    		width: 70%;
+		}
+		.checkemail{
+			font-size:16px;
+			.receber-emails{
+				width:20px;
+				margin-left: 100px;
+				margin-top: -10px;
+	    		display: inline-block;
+			}
+			.mensagem{
+				margin-left: 100px;
+			}
+    		span{
+    			font-size:14px;
+    			display: block;
+    		}
+			input{
+				width: 20px;
+			}
+		}
+		form{
+			margin-top:10px;
+			p{
+				margin-bottom:0px;
+			}
+		}
+		button, input, select, textarea {
+			display: inline-block;
+			width:100%;
+			background:#fff;
+			padding:10px;
+		}
+		textarea{
+			height: 100px;
+		}
+		input[type=submit]{
+			color: #8dc63f;
+		    background: #343939;
+		    display: block;
+		    padding: 10px 15px;
+		    width: auto;
+		    text-transform: uppercase;
+		    font-size: 1.5em;
+		    font-weight: 300;
+		    letter-spacing: 1px;
+		    margin: 0 auto;
+		    margin-top: 10px;
+		}
+
+
+		.infos-footer{
+			text-align:center;
+			font-weight:300;
+			margin-top: 60px;
+			a{
+				text-decoration:none;
+				&:hover{
+					color:#fff;
+				}
+			}
+			.email{
+				text-decoration:none;
+				display:block;
+			}
+			.icons{
+				color: #343939;
+			    background: #fff;
+			    border-radius: 60px;
+			    font-size: 1.5em;
+			    display: inline-block;
+			    width: 45px;
+			    height: 45px;
+			    padding-top: 4px;
+			    margin: 5px;
+			    &:hover{
+			    	background: #343939;
+			    	color: #fff;
+			    }
+			}
+		}
+	}
+	
+	#rodape{
+		background: #343939;
+		color: #6b7070;
+		padding: 15px 0px 0px;
+		font-weight:400;
+		font-size: 14px;
+		ul{
+			li{
+				display:inline-block;
+				a{
+					text-decoration:none;
+					color:#6b7070;
+					padding:5px 8px;
+					&:hover{
+						color:#6b7070;
+					}
+				}
+			}
+		}
+
+		a{
+			font-weight:300;
+			font-size: 14px;
+			letter-spacing:0.5px;
+			text-decoration:none;
+			&:hover{
+				color:#fff;
+			}
+		}
+		.icons{
+			color: #6b7070;
+		    padding: 5px 8px;
+		    font-size: 1.7em;
+		    margin-top: -12px;
+		    display: inline-block;
+		    text-decoration:none;
+			&:hover{
+				color:#6b7070;
+			}
+		}
+	}
+}
