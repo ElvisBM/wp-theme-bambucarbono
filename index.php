@@ -39,7 +39,34 @@ get_header(); ?>
 	  	</a>
 	  	<?php }//end if repeatable ?>			
 	</div>
+	<div id="metas" class="container">
+		<div class="row">			
+			<?php 
+				$metas = get_post_meta( $post->ID );
+				//Remove Metas WP
+				array_splice($metas, 0, 4);
 
+				$countMetas = count($metas) / 3;
+
+				for ($i=1; $i <= $countMetas; $i++) { 
+			?>
+				<div class="col-md-4 com-sm-12">
+					<?php
+						$titulo = get_post_meta($post->ID, "titulo_".$i , $single );
+						$texto  = get_post_meta($post->ID, "texto_".$i , $single );
+						$icon   = get_post_meta($post->ID, "icon_".$i , $single );
+					?>
+					<img src="<?php echo $icon; ?>" title="<?php echo $titulo; ?>" alt="<?php echo $titulo; ?>">
+					<div class="content">
+						<h3><?php echo $titulo; ?></h3>
+						<p><?php echo $texto; ?></p>
+					</div>
+				</div>
+			<?
+				}//End For $metas
+			?>
+		</div>
+	</div>
 	<div class="container">
 		<div class="row">
 		<?php 
