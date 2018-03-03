@@ -6,3 +6,57 @@
 .icons{
 	font-family: 'FontAwesome';
 }
+
+header{
+	.remove-padding{
+		padding-left:5px;
+		padding-right:5px;
+	}
+	nav{
+		
+		&.navbar{
+			padding:0px;
+			margin:0px;	
+			margin-top:40px;
+		}
+		a{
+			color:#aeadad;
+			padding:5px 6px;
+			text-decoration:none;
+			font-weight: 300;
+			&:hover{
+				text-decoration:none;
+				color:#aeadad;
+				border-bottom: 4px solid #71bc54;
+			}
+		}
+
+		.current-menu-item{
+			a{
+				color:#aeadad;
+				border-bottom: 4px solid #71bc54;
+			}
+		}
+	}
+
+	.widget-top{
+		color:#aeadad;
+		margin-top:20px;
+		font-size:15px;
+		font-weight: 300;
+		aside{
+			border: 1px solid #71bc54;
+			padding: 10px 15px;
+    		display: inline-block;
+		}
+		a{
+			color:#343434;
+			text-decoration:none;
+			&:hover{
+				text-decoration:none;
+				color:#343434;
+			}
+		}
+	}
+
+}
