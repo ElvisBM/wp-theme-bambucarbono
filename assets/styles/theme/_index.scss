@@ -1,4 +1,4 @@
-#banner{
+#banner-home{
 	.item{
 		width:100%;
 		background-repeat: no-repeat!important;
@@ -14,7 +14,7 @@
 	}
 }
 
-#metas{
+#metas-home{
 	padding: 40px 0px;
 	img{
 		display:inline-block;
@@ -30,7 +30,7 @@
 	}
 	h3{
 		font-weight: 300;
-		font-size:1.5em;
+		font-size:1.8em;
 		margin-top: 30px;
     	margin-bottom: 3px;
 	}
@@ -39,4 +39,41 @@
 		font-size:0.88em;
 		line-height:1em;
 	}
+}
+
+#pages-home{
+	padding:40px 0px;
+	.item-page{
+		overflow:hidden;
+		margin-bottom:20px;
+	}
+	img{
+		width:auto;
+		height:295px;
+	}
+	h3{
+		color: #fff;
+	    margin-top: 35%;
+	    border: 1px solid #fff;
+	    display: inline-block;
+	    padding: 10px;
+	    font-weight: 300;
+	}
+	.bg-h3{
+		display:none;
+	}
+	a{
+		&:hover{
+			.bg-h3{
+				display:block;
+				position: absolute;
+			    width: 97%;
+			    height: 100%;
+			    margin-top: -295px;
+			    background: rgba(113, 190, 85, 0.22);
+			    text-align: center;
+			}
+		}
+	}
+
 }
