@@ -7,6 +7,7 @@
  * Fonts
  * ------------------------------------------------------------------------- */
 @import "../fonts/font-awesome.css";
+@import "../fonts/font-roboto.css";
 
 /* ----------------------------------------------------------------------------
  * Mixins & Variables
@@ -26,6 +27,7 @@
 @import "theme/header";
 @import "theme/index";
 @import "theme/page";
+@import "theme/footer";
 @import "theme/responsive";
 
 /* ----------------------------------------------------------------------------
