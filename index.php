@@ -1,71 +1,67 @@
 <?php
 /**
- * The blog page.
+ * Template Name: Home
  *
- * @package Neat
+ * @package base-wp-theme
  */
 
 get_header(); ?>
-
-
-	<div class="aa_wrap">
-
-		<?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
-
-					<?php get_template_part( 'templates/content' ) ?>
-
-				<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'templates/content', 'none' ); ?>
-
-		<?php endif; ?>
-
+	<div id="banner">
+		<?php
+			//Galeria
+			$gallery = get_post_meta( $post->ID, 'repeatable_images', true );
+			if(! empty($gallery) ){
+				$count = count($gallery);
+		?>
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			<?php 
+				for ($i = 0; $i < $count; $i++) {		
+	  				$url_image = wp_get_attachment_url( $gallery[$i]['images'] ); 
+	  				$text_image = $gallery[$i]['text'];
+	  				$active = ( $i==0 ? ' active' : '' );
+	  				echo '<div class="carousel-item row '.$active.'">';
+	  				echo '<div class="item" style="background: url('.$url_image.');">';
+	  				echo '<div class="container">';
+	  				echo '<h3>'.$text_image.'</h3>';
+					echo '</div>';
+		  			echo '</div>';
+		  			echo '</div>';
+			  	}
+			?>
+		</div>
+		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+	    	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	    	<span class="sr-only">Previous</span>
+	  	</a>
+	  	<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+	    	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+	    	<span class="sr-only">Next</span>
+	  	</a>
+	  	<?php }//end if repeatable ?>			
 	</div>
-	<!-- /.aa_wrap -->
 
 	<div class="container">
 		<div class="row">
-			<div class="col-sm">
-				Teste AB 
-				<div style="font-size:3em; font-family: 'FontAwesome'; color:#4300ff">
-				  <i class="fa fa-camera-retro fa-10x"></i>
+		<?php 
+			$args = array(
+				'exclude' => '76',
+				'post_type' => 'page',
+				'post_status' => 'publish'
+			); 
+			$pages = get_pages($args); 
+			foreach ( $pages as $page ) {
+				$src = wp_get_attachment_image_src( get_post_thumbnail_id($page->ID), 'medium_large' );
+				$url = $src[0];
+		?>
+				<div class="col-md-4 com-sm-12">
+					<a href="<?php echo  get_page_link( $page->ID ); ?>" alt="<?php echo $page->post_title; ?>" title="<?php echo $page->post_title; ?>">
+						<img src="<?php echo $url; ?>" title="<?php echo $page->post_title; ?>" alt="<?php echo $page->post_title; ?>" />
+						<span><?php echo $page->post_title; ?></span>
+					</a>
 				</div>
-			</div>
-			<div class="col-sm">
-				Teste CD
-				<div style="font-size:3em; font-family: 'FontAwesome'; color:#4300ff">
-				<span class="fa-stack fa-2x">
-				  <i class="fas fa-square fa-stack-2x"></i>
-				  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-				</span>
-				<span class="fa-stack fa-2x">
-				  <i class="fas fa-circle fa-stack-2x"></i>
-				  <i class="fas fa-flag fa-stack-1x fa-inverse"></i>
-				</span>
-				<span class="fa-stack fa-2x">
-				  <i class="fas fa-square fa-stack-2x"></i>
-				  <i class="fas fa-terminal fa-stack-1x fa-inverse"></i>
-				</span>
-				<span class="fa-stack fa-2x">
-				  <i class="fas fa-camera fa-stack-1x"></i>
-				  <i class="fas fa-ban fa-stack-2x" style="color:Tomato"></i>
-				</span>
-			</div>
-			</div>
-			<div class="col-sm">
-				Teste EF
-				<div style="font-size:3em; font-family: 'FontAwesome'; color:#4300ff">
-				<div style="font-size:3em;">
-					<i class="fas fa-user" />
-				</div>
-			</div>
-			</div>
+		
+		<?php }//EndForeach Pages ?>
 		</div>
 	</div>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
