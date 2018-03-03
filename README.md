@@ -1,4 +1,4 @@
-# Base Wp Theme Amarelo Manga
+# Wp Theme Bambu Carbono
 
 Base theme for wordpress
 
