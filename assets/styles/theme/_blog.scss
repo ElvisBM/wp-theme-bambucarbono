@@ -1,0 +1,121 @@
+#blog{
+	#banner{
+		text-align:center;		
+		.item{
+			width:100%;
+			background-repeat: no-repeat!important;
+			background-size:cover!important;
+			background-position-y: 70%!important;
+		}
+
+		h3{
+			color: #fff;
+		    font-weight: 100;
+		    margin: 25% 0px 15%;
+		    font-size: 2.8em;
+		    display:inline-block;
+		    border:1px solid #fff;
+		    padding:5px 80px;
+		}
+	}
+
+	#content{
+		color:#807f7f;
+		text-align:center;
+		font-weight:300;
+		font-size:1.4em;
+		padding:15px 0px 20px;
+	}
+
+	#posts{
+		h3{
+			color:#3e3e3e;
+			font-weight:300;
+			font-size: 3em;
+		}
+		p{
+			color:#3e3e3e;
+			font-weight:300;
+			font-size: 1em;
+			padding-right:12%;
+		}
+
+		.vejamais{
+			text-decoration:none;
+			color:#fff;
+			background:#71bc54;
+			padding:7px 15px;
+			font-weight:300;
+			&:hover{
+				text-decoration:none;
+				backgroound:#3e3e3e;
+			}
+		}
+
+		hr{
+			display: block;
+		    width: 70%;
+		    border: 1px dashed #e5e5e5;
+		    margin: 50px 25% 40px 10%;
+		}
+	}
+
+	#sidebar{
+		h3{
+			color:#3e3e3e;
+			font-weight:500;
+			font-size: 1.2em;
+			padding: 5px;
+			border-bottom: 1px dashed #e5e5e5;
+			&:before{
+				content: '';
+				width: 4px;
+				height: 15px;
+				background:#71bc54;
+				display:inline-block;
+				margin-right:5px;
+			}
+		}
+
+		p{
+			color:#3e3e3e;
+			font-weight:300;
+			font-size: 0.83em;
+			margin-left: 5px;
+		}
+		.widget{
+			margin:40px 0px;
+		}
+
+		input{
+			color: #3e3e3e;
+			padding: 5px;
+			border:1px solid #e5e5e5;
+			width:100%;
+		}
+
+		input[type=submit]{
+			background:#71bc54;
+			border: 0px;
+			color: #fff;
+
+		}
+
+		.widget_tag_cloud{
+			a{
+				color:#3e3e3e;
+				border:1px solid #e5e5e5;
+				padding: 5px;
+				font-size:1em;
+				display: inline-block;
+				margin: 2px;
+				&:hover{
+					text-decoration:none;
+					background:#71bc54;
+					color: #fff;
+				}
+			}
+		}
+	}
+
+}
