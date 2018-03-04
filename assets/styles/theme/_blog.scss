@@ -48,6 +48,7 @@
 			font-weight:300;
 			font-size: 1em;
 			padding-right:12%;
+			display: block;
 		}
 
 		.vejamais{
@@ -84,6 +85,11 @@
 				-o-transform: rotate(-9deg) skew(35deg, 145deg);
 				-ms-transform: rotate(-9deg) skew(35deg, 145deg);
 				transform: rotate(-9deg) skew(35deg, 145deg);
+				&:hover{
+					background:#71bc54;
+					color:#fff;
+				}
+
 				i{
 					-moz-transform: rotate(43deg);
 					-webkit-transform: rotate(43deg);
@@ -92,6 +98,8 @@
 					transform: rotate(43deg);
 
 				}
+
+
 			}
 		}
 
