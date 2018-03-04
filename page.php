@@ -12,24 +12,53 @@
 
 get_header(); ?>
 
-	<div class="aa_wrap">
-
-		<?php while ( have_posts() ) : the_post(); ?>
-
-			<?php get_template_part( 'templates/content', 'page' ); ?>
-
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
-
-		<?php endwhile; // end of the loop. ?>
-
+<div id="page">
+	<div id="banner">
+		<?php
+			$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+		?>
+		<div class="item" style="background: url(<?php echo $url; ?>);">
+		 	<div class="container">
+		  		<h3><?php echo $post->post_title;?></h3>
+		  	</div>
+		</div>
 	</div>
-	<!-- /.aa_wrap -->
+	<div id="content" >
+		<div class="container">
+			<?php while ( have_posts() ) : the_post(); ?>
+				<?php the_content(); ?>
+			<?php endwhile; // end of the loop. ?>
+		</div>
+	</div>
+	<?php
+		//Galeria
+		$gallery = get_post_meta( $post->ID, 'repeatable_images', true );
+		if(! empty($gallery) ){
+				$count = count($gallery);
+	?>
+	<div id="galeria">
+		<div class="container">
+			<div class="row">
+				<?php
+					foreach ( $gallery as $ga ) {
+						$url_image = wp_get_attachment_url( $ga['images']); 
+		  				$text_image = $ga['text'];
+		  				echo '<div class="col-md-4 com-sm-12 item-page">';
+		  				echo '<a>';
+		  				echo '<img src="'.$url_image.'" />';
+		  				echo '<div class="bg-h3"><h3>'.$text_image.'</h3></div>';
+		  				echo '</a>';
+		  				echo '</div>';
+					}
+				?>
+			</div>
+		</div>
+	</div>
+	<?php
+		}//EndIf empty gallery
+	?>
+</div>
 
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
+
+
