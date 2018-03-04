@@ -61,12 +61,47 @@
 				backgroound:#3e3e3e;
 			}
 		}
+		.wp-post-image{
+			margin-bottom:30px;
+		}
+		.social-blog{
+			width: 80%;
+    		text-align: center;
+    		margin-top: 10px;
+
+			a{
+				color:#3e3e3e;
+				background:#fff;
+				font-size:1.1em;
+				padding: 3px 0px;
+			    text-align: center;
+			    width: 35px;
+				border:1px solid #e5e5e5;
+				display: inline-block;
+				margin-right: 20px;
+				-moz-transform: rotate(-9deg) skew(35deg, 145deg);
+				-webkit-transform: rotate(-9deg) skew(35deg, 145deg);
+				-o-transform: rotate(-9deg) skew(35deg, 145deg);
+				-ms-transform: rotate(-9deg) skew(35deg, 145deg);
+				transform: rotate(-9deg) skew(35deg, 145deg);
+				i{
+					-moz-transform: rotate(43deg);
+					-webkit-transform: rotate(43deg);
+					-o-transform: rotate(43deg);
+					-ms-transform: rotate(43deg);
+					transform: rotate(43deg);
+
+				}
+			}
+		}
 
 		hr{
 			display: block;
 		    width: 70%;
 		    border: 1px dashed #e5e5e5;
-		    margin: 50px 25% 40px 10%;
+		    margin: 30px 25% 80px 10%;
+		    margin-top:-17px;
+
 		}
 	}
 
