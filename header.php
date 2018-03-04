@@ -17,7 +17,7 @@
 <body <?php body_class(); ?>>
 	<div class="container">
 		<header class="row">
-			<div id="logo" class="col-sm-6 col-md-3 remove-padding">
+			<div id="logo" class="col-sm-6 col-md-2 col-lg-3 remove-padding">
 				<?php 
 					$custom_logo_id = get_theme_mod( 'custom_logo' );
 					$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
@@ -28,8 +28,8 @@
 					}
 				?>
 			</div>
-			<div class="col-sm-4 col-md-6 remove-padding">
-				<nav class="navbar navbar-expand-lg navbar-light">
+			<div class="col-sm-4 col-md-10 col-lg-6 remove-padding">
+				<nav class="navbar navbar-expand-md navbar-light">
 					<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				    	<span class="navbar-toggler-icon"></span>
 				 	 </button>
@@ -51,7 +51,7 @@
 					</div>
 				</nav>
 			</div>
-			<div class="widget-top col-md-3 col-sm-12 remove-padding">
+			<div class="widget-top col-sm-12 col-md-12 col-lg-3 remove-padding">
 				<?php 
 					if ( is_active_sidebar( 'header-top' ) ) {
 						dynamic_sidebar( 'header-top' );

@@ -58,6 +58,7 @@
 		#content{
 			p{
 				font-size: 16px;
+				width: 100%;
 			}
 		}
 
@@ -69,6 +70,9 @@
 			}
 			h3{
 				font-size:2em;
+			}
+			p{
+				width:100%;
 			}
 		}
 	}
@@ -100,9 +104,24 @@
 		#footer{
 			label{
 				width:100%;
+				.label{
+					width:100%;
+					text-align:center;
+				}
+			}
+			.wpcf7-form-control-wrap{
+				width:100%;
+			}
+			.checkemail{
+				.receber-emails{
+					margin-left:0px;
+				}
+				.mensagem{
+					margin-left:0px;
+					font-size:12px;
+				}
 			}
 		}
-
 	}
 
 	#rodape{
@@ -111,6 +130,37 @@
 		}
 		.agencia-footer{
 			margin:10px 0px;
+		}
+	}
+}
+
+@media screen and (max-width: 1439px) and (min-width:769px) {
+	header{
+		.widget-top{
+			font-size:13px;
+		}
+
+		nav{
+			a{
+				padding: 5px 4px;
+    			font-size: 0.86em;
+			}
+		}
+
+		#logo{
+			padding:5px 0px;
+			img{
+				width:100%;
+			}
+		}
+	}
+
+	#blog{ 
+		#posts{
+			padding:0px 10px;
+			 .wp-post-image{
+			 	width:100%;
+			 }
 		}
 	}
 }

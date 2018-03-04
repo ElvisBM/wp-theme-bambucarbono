@@ -24,13 +24,13 @@ get_header(); ?>
 	</div>
 	<div  class="container">	
 		<div class="row">
-			<div id="posts" class="col-md-9 col-xs-12">
+			<div id="posts" class="col-md-12 col-lg-9">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'templates/content', 'blog' ); ?>
 					<?php //the_post_navigation(); ?>
 				<?php endwhile; // end of the loop. ?>
 			</div>
-			<div id="sidebar" class="col-md-3 hidden-sm">
+			<div id="sidebar" class="col-md-12 col-lg-3 hidden-sm">
 				<?php get_sidebar(); ?>
 			</div>
 		</div>
