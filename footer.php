@@ -61,6 +61,11 @@
 
 
 <?php wp_footer(); ?>
+<?php 
+	if ( is_active_sidebar( 'analytics-footer' ) ) {
+		dynamic_sidebar( 'analytics-footer' );
+	};
+?>
 
 </body>
 </html>
