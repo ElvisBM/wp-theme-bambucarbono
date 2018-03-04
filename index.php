@@ -84,7 +84,7 @@ get_header(); ?>
 				$src = wp_get_attachment_image_src( get_post_thumbnail_id($page->ID), 'medium_large' );
 				$url = $src[0];
 		?>
-				<div class="col-md-4 com-sm-12 item-page">
+				<div class="col-md-4 co-sm-12 item-page">
 					<a href="<?php echo  get_page_link( $page->ID ); ?>" alt="<?php echo $page->post_title; ?>" title="<?php echo $page->post_title; ?>">
 						<img src="<?php echo $url; ?>" title="<?php echo $page->post_title; ?>" alt="<?php echo $page->post_title; ?>" />
 						<div class="bg-h3">

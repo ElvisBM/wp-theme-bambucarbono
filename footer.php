@@ -42,7 +42,7 @@
 				?>
 				<?php 
 					if ( is_active_sidebar( 'agencia-footer' ) ) {
-						echo '<div class="infos-footer col-md-3 col-sm-12">';
+						echo '<div class="agencia-footer col-md-3 col-sm-12">';
 							dynamic_sidebar( 'agencia-footer' );
 						echo '</div>';
 					};
