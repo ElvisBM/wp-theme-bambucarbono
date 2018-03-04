@@ -43,7 +43,7 @@ get_header(); ?>
 					foreach ( $gallery as $ga ) {
 						$url_image = wp_get_attachment_url( $ga['images']); 
 		  				$text_image = $ga['text'];
-		  				echo '<div class="col-md-3 com-sm-12 item-page">';
+		  				echo '<div class="col-md-3 col-sm-6 item-page">';
 		  				echo '<img src="'.$url_image.'" />';
 		  				echo '<div class="bg-h3"><h3>'.$text_image.'</h3></div>';
 		  				echo '</div>';
