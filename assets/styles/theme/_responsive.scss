@@ -37,6 +37,42 @@
 		    top: 260px;
 		}
 	}
+	#page{
+		#banner{
+			h3{
+				font-size:2em;
+				padding: 5px 40px;
+    			margin: 25% 10%;
+			}
+		}
+	}
+
+	#blog{
+		#banner{
+			h3{
+				font-size:2em;
+				padding: 5px 40px;
+    			margin: 25% 10%;
+			}
+		}
+		#content{
+			p{
+				font-size: 16px;
+			}
+		}
+
+		#posts{
+			margin:10px 10px 50px;
+			img{
+				width:100%;
+				height: auto;
+			}
+			h3{
+				font-size:2em;
+			}
+		}
+	}
+	
 	#metas-home{
 		padding:10px 10px;
 		img{
