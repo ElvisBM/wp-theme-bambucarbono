@@ -40,44 +40,39 @@ get_header(); ?>
 		<div class="container">
 			<div class="row">
 				<?php
+					$cont = 1;
 					foreach ( $gallery as $ga ) {
 						$url_image = wp_get_attachment_url( $ga['images']); 
 		  				$text_image = $ga['text'];
 		  				echo '<div class="col-md-4 com-sm-12 item-page">';
-		  				echo '<a href="#" data-toggle="modal" data-target="#img'.$ga['images'].'">';
-		  				echo '<img src="'.$url_image.'" />';
+		  				echo '<a href="#" data-url="'.$url_image.'" data-modal="'.$cont.'"  title="'.$text_image.'" class="thumbA">';
+		  				echo '<img src="'.$url_image.'" class="thumbnail"/>';
 		  				echo '<div class="bg-h3"><h3>'.$text_image.'</h3></div>';
 		  				echo '</a>';
 		  				echo '</div>';
+		  				$cont++;
 					}
 				?>
 			</div>
 		</div>
 	</div>
-	<div id="modalgaleria">
-		<?php
-			foreach ( $gallery as $ga ) {
-				$url_image = wp_get_attachment_url( $ga['images']); 
-  				$text_image = $ga['text'];
-  		?>
-  		<div class="modal fade" id="img<?php echo $ga['images']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-lg" role="document">
-			    <div class="modal-content">
-				    <div class="modal-header">
-				        <h5 class="modal-title" id="exampleModalLabel"><?php echo $text_image; ?></h5>
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				          <span aria-hidden="true">&times;</span>
-				        </button>
-				    </div>
-				    <div class="modal-body">
-				       <img src="<?php echo $url_image; ?>" />
-				    </div>
-			    </div>
-			</div>
-		</div>
-  		<?php
-			}//EndForeach Gallery for Modal
-		?>
+	<div id="myModal" class="modal fade" tabindex="-1" role="dialog" data-modal="" >
+  		<div id="modalgaleria"  class="modal-dialog modal-lg">
+  			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">×</button>
+					<h3 class="modal-title">Heading</h3>
+				</div>
+				<div class="modal-body">
+					<img src="" class="img-modal" />
+				</div>
+				<div class="modal-footer">
+					<button id="prev-btn" class="btn btn-warning">Anterior</button>
+			        <button id="next-btn" class="btn btn-primary">Próximo</button>
+					<button class="btn btn-default" data-dismiss="modal">Fechar</button>
+				</div>
+   			</div>
+  		</div>
 	</div>
 	<?php
 		}//EndIf empty gallery
