@@ -129,10 +129,37 @@ if (file_exists(dirname(__FILE__).'/inc/gallery-metabox.php')) {
  *
  * INC
  *
- * Portfolio Post-Type, Clientes Taxonomies
+ * metabox for image taxonomy
  *
  * @since 1.0.0
  */
 if (file_exists(dirname(__FILE__).'/inc/image-category-post-metabox-taxonomy.php')) {
     require_once( dirname(__FILE__).'/inc/image-category-post-metabox-taxonomy.php' );
 }
+
+
+/**
+ *
+ * INC
+ *
+ * Metabox Page thumbnail for Home
+ *
+ * @since 1.0.0
+ */
+if (file_exists(dirname(__FILE__).'/inc/thumbnail-page-home-metabox.php')) {
+    require_once( dirname(__FILE__).'/inc/thumbnail-page-home-metabox.php' );
+}
+
+/**
+ *
+ * INC
+ *
+ * Metabox Post thumbnail for posts blog
+ *
+ * @since 1.0.0
+ */
+if (file_exists(dirname(__FILE__).'/inc/thumbnail-posts-metabox.php')) {
+    require_once( dirname(__FILE__).'/inc/thumbnail-posts-metabox.php' );
+}
+
+

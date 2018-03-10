@@ -10,22 +10,28 @@
 				width:100%;
 			}
 		}
+		 .navbar-toggler{
+		 	margin-left: 30px;
+		 }
 
 		.navbar-collapse{
 			margin-top: 30px;
 		    width: 272px;
 		    float: right;
 		    position: relative;
-		    left: -100%;
+		    left: -120%;
 		    text-align:center;
 		    a{
 		    	padding: 0px;
-		    	margin-bottom: 5px;
-    			display: inline-block;
+			    font-size: 1.2em;
+			    margin-bottom: 8px;
+			    display: inline-block;
 		    }
 		}
 		.widget-top{
 			margin: 10px;
+    		width: 100%;
+    		text-align: center;
 		}
 	}
 	#banner-home{
@@ -44,6 +50,10 @@
 				padding: 5px 40px;
     			margin: 25% 10%;
 			}
+		}
+
+		p{
+			padding: 0px;
 		}
 	}
 

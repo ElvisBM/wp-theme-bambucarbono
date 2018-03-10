@@ -50,6 +50,7 @@
 	img{
 		width:auto;
 		height:295px;
+
 	}
 	h3{
 		color: #fff;
@@ -70,8 +71,13 @@
 			    width: 97%;
 			    height: 100%;
 			    margin-top: -295px;
-			    background: rgba(113, 190, 85, 0.22);
+			    //background: rgba(113, 190, 85, 0.22);
 			    text-align: center;
+			}
+
+			img{
+				filter: grayscale(20%) blur(3px);
+				-webkit-filter: grayscale(20%) blur(3px);
 			}
 		}
 	}

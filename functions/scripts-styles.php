@@ -46,9 +46,6 @@ function aa_scripts()
         wp_register_script('mainjs', get_template_directory_uri() . '/dist/scripts/main.js'); // Custom scripts
         wp_enqueue_script('mainjs'); // Enqueue it!
 
-      
-
-
     }
 }
 
@@ -107,5 +104,7 @@ function aa_enqueue_comments_reply() {
  */
 function my_enqueue($hook) {
     wp_enqueue_script( 'my_custom_script', get_template_directory_uri() .  '/assets/scripts/metabox-repeatable-imageUpload.js' );
+
+     wp_enqueue_script( 'my_custom_script2', get_template_directory_uri() .  '/assets/scripts/metabox-imageUpload.js' );
 }
 add_action( 'admin_enqueue_scripts', 'my_enqueue' );

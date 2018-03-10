@@ -81,12 +81,13 @@ get_header(); ?>
 			); 
 			$pages = get_pages($args); 
 			foreach ( $pages as $page ) {
-				$src = wp_get_attachment_image_src( get_post_thumbnail_id($page->ID), 'medium_large' );
+				$thumbnailId = get_post_meta( $page->ID, '_thumbnail_image_id', true );
+				$src = wp_get_attachment_image( $thumbnailId, 'medium_large' );
 				$url = $src[0];
 		?>
 				<div class="col-md-4 co-sm-12 item-page">
 					<a href="<?php echo  get_page_link( $page->ID ); ?>" alt="<?php echo $page->post_title; ?>" title="<?php echo $page->post_title; ?>">
-						<img src="<?php echo $url; ?>" title="<?php echo $page->post_title; ?>" alt="<?php echo $page->post_title; ?>" />
+						<?php echo $src; ?>
 						<div class="bg-h3">
 							<h3><?php echo $page->post_title; ?></h3>
 						</div>
