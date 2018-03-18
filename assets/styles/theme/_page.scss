@@ -79,11 +79,12 @@
 				    margin-top: -295px;
 				    text-align: center;
 				}
-				img{
-					filter: grayscale(20%) blur(3px);
-					-webkit-filter: grayscale(20%) blur(3px);
-				}
-			}			
+			}
+
+			img{
+				filter: grayscale(20%) blur(3px);
+				-webkit-filter: grayscale(20%) blur(3px);
+			}
 		}
 	}
 

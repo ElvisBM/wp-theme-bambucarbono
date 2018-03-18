@@ -15,7 +15,7 @@ get_header(); ?>
 		?>
 		<div class="item" style="background: url(<?php echo $url; ?>);">
 		 	<div class="container">
-		  		<h3><a href="<?php echo esc_url( $cat_url ); ?>" title="Blog Bambu Carbono Zero" class="bloglink">Blog</a> >> <?php echo $post->post_title;?></h3>
+		  		<h3><?php echo $post->post_title;?></h3>
 		  	</div>
 		</div>
 	</div>
@@ -25,7 +25,7 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<h3><?php the_title(); ?></h3>
 					<?php the_content(); ?>
-					<?php the_post_thumbnail( 'medium_large' ); ?>
+					<?php //the_post_thumbnail( 'medium_large' ); ?>
 				<?php endwhile; // end of the loop. ?>
 				<?php
 					$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );

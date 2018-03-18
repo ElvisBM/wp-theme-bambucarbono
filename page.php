@@ -57,7 +57,7 @@ get_header(); ?>
 		</div>
 	</div>
 	<div id="myModal" class="modal fade" tabindex="-1" role="dialog" data-modal="" >
-  		<div id="modalgaleria"  class="modal-dialog modal-lg">
+  		<div id="modalgaleria" class="modal-dialog modal-lg">
   			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">×</button>
